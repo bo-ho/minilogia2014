@@ -48,7 +48,6 @@ def testuj(n):
 #tutaj jest miejsce na Twoje rozwiązania zadania
 
 def kwiatek():
-    down()
     right(90)
     fillcolor("yellow")
     begin_fill()
@@ -87,19 +86,12 @@ def kwiatki():
     forward(100)
     right(180)
     kwiatek()
-    up()
     right(60)
     forward(100)
-    right(30)
-    forward(100)
-    left(90)
+    left(60)
     forward(400)
-    left(90)
-    forward(100)
-    left(180)
-    down()
+    right(90)
     kwiatek()
-
 
 testuj(1)
 done()

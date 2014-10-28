@@ -47,12 +47,12 @@ def testuj(n):
 
 #tutaj jest miejsce na Twoje rozwiązania zadania
 
-koloreczek = "green"
+koloreczek = "lime"
 def kolor():
     global koloreczek
     if koloreczek == "yellow" :
-        koloreczek = "green"
-    elif koloreczek == "green" :
+        koloreczek = "lime"
+    elif koloreczek == "lime" :
         koloreczek = "yellow"
 
 def kształcik():
@@ -100,5 +100,7 @@ def mozaika(ilość):
         right(90)
         down()
 
-testuj(4)
+# testuj(4)
+tracer(0)
+mozaika(13)
 done()

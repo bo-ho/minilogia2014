@@ -48,7 +48,7 @@ def testuj(n):
 #tutaj jest miejsce na Twoje rozwiązania zadania
 
 def baszta(podstawa):
-    fillcolor("brown")
+    fillcolor("sienna")
     begin_fill()
     right(90)
     forward(podstawa*5)

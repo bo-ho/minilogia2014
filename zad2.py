@@ -53,27 +53,17 @@ def kwadrat(boczek):
         right(90)
     forward(boczek)
 
-
-def niebieski(boczek):
-    fillcolor("blue")
+def wypelniony(boczek,kolor):
+    fillcolor(kolor)
     begin_fill()
     kwadrat(boczek)
     end_fill()
-
-
-def zielony(boczek):
-    fillcolor("green")
-    begin_fill()
-    kwadrat(boczek)
-    end_fill()
-
-
 
 def iksik(boczek):
     left(45)
-    niebieski(boczek)
-    zielony(boczek)
-    niebieski(boczek)
+    wypelniony(boczek,"aqua")
+    wypelniony(boczek,"lime")
+    wypelniony(boczek,"aqua")
     left(180)
     up()
     forward(boczek)
@@ -81,16 +71,14 @@ def iksik(boczek):
     right(90)
     forward(boczek)
     left(180)
-    niebieski(boczek)
-    zielony(boczek)
-    niebieski(boczek)
-
+    wypelniony(boczek,"aqua")
+    wypelniony(boczek,"lime")
+    wypelniony(boczek,"aqua")
 
 def oblicz_boczek(bok_wzorka):
     bok_kwadratu = bok_wzorka / 4
     boczek = bok_kwadratu / sqrt(8)
     return boczek
-
 
 def pozycja_poczatkowa(bok_wzorka):
     up()
@@ -100,31 +88,8 @@ def pozycja_poczatkowa(bok_wzorka):
     down()
 
 
-def linie(bok_wzorka):
-    right(90)
-    forward(bok_wzorka)
-    right(180)
-    forward(bok_wzorka / 4)
-    right(90)
-    forward(bok_wzorka / 4)
-    left(180)
-    forward(bok_wzorka)
-    right(180)
-    forward(bok_wzorka / 4)
-    right(90)
-    forward(bok_wzorka / 4)
-    left(180)
-    forward(bok_wzorka)
-    left(180)
-    forward(bok_wzorka / 4)
-    right(90)
-    forward(bok_wzorka / 4)
-    left(180)
-    forward(bok_wzorka)
-
-
 def polksiezyce(bok_wzorka):
-    fillcolor("green")
+    fillcolor("lime")
     begin_fill()
     forward(bok_wzorka/8)
     right(90)
@@ -143,8 +108,6 @@ def polksiezyce(bok_wzorka):
     forward(bok_wzorka/4)
     right(90)
     end_fill()
-
-
 
 
 def motyw(bok_wzorka):
@@ -155,16 +118,17 @@ def motyw(bok_wzorka):
         right(90)
         forward(bok_wzorka)
         right(90)
-        forward(boczek/(6/4))
+        forward(bok_wzorka/16)
         right(90)
         iksik(boczek)
         up()
         right(45)
-        forward(boczek/(6/4))
+        forward(bok_wzorka/16)
         right(90)
         down()
-    linie(bok_wzorka)
+    forward(bok_wzorka/4)
     right(90)
+    forward(bok_wzorka/4)
     polksiezyce(bok_wzorka)
     forward(bok_wzorka*(3/4))
     right(90)
@@ -187,9 +151,6 @@ def motyw(bok_wzorka):
     forward(bok_wzorka/8)
     right(90)
     iksik(boczek*2)
-
-
-
 
 testuj(2)
 done()
